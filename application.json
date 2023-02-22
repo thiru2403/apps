@@ -1,25 +1,37 @@
 {
   "pages": [
     {
-      "id": "Page1",
+      "id": "Dashboard page",
+      "isDefault": false
+    },
+    {
+      "id": "login page",
       "isDefault": true
+    },
+    {
+      "id": "New loan page",
+      "isDefault": false
     }
   ],
   "viewMode": false,
   "appIsExample": false,
   "unreadCommentThreads": 0,
-  "color": "#F4FFDE",
-  "icon": "system",
+  "color": "#F1DEFF",
   "unpublishedAppLayout": {
-    "type": "MOBILE"
+    "type": "DESKTOP"
   },
   "publishedAppLayout": {
-    "type": "MOBILE"
+    "type": "DESKTOP"
   },
   "unpublishedCustomJSLibs": [],
   "publishedCustomJSLibs": [],
   "evaluationVersion": 2,
   "applicationVersion": 2,
+  "embedSetting": {
+    "height": "720px",
+    "width": "1024px",
+    "showNavigationBar": true
+  },
   "collapseInvisibleWidgets": true,
   "isManualUpdate": false,
   "deleted": false
