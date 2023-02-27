@@ -13503,6 +13503,12 @@
                         },
                         {
                           "key": "tableData"
+                        },
+                        {
+                          "key": "primaryColumns.branchId.computedValue"
+                        },
+                        {
+                          "key": "primaryColumns.expensesById.computedValue"
                         }
                       ],
                       "leftColumn": 3,
@@ -13554,7 +13560,9 @@
                         "customColumn2",
                         "customColumn1",
                         "_id",
-                        "EditActions1"
+                        "EditActions1",
+                        "branchId",
+                        "expensesById"
                       ],
                       "dynamicPropertyPathList": [
                         {
@@ -13856,6 +13864,62 @@
                           "discardButtonVariant": "TERTIARY",
                           "isSaveDisabled": "{{expense.processedTableData.map((currentRow, currentIndex) => ( !expense.updatedRowIndices.includes(currentIndex)))}}",
                           "isDiscardDisabled": "{{expense.processedTableData.map((currentRow, currentIndex) => ( !expense.updatedRowIndices.includes(currentIndex)))}}"
+                        },
+                        "branchId": {
+                          "allowCellWrapping": false,
+                          "index": 0,
+                          "width": 150,
+                          "originalId": "branchId",
+                          "id": "branchId",
+                          "alias": "branchId",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "branchId",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{expense.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"branchId\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
+                        },
+                        "expensesById": {
+                          "allowCellWrapping": false,
+                          "index": 4,
+                          "width": 150,
+                          "originalId": "expensesById",
+                          "id": "expensesById",
+                          "alias": "expensesById",
+                          "horizontalAlignment": "CENTER",
+                          "verticalAlignment": "CENTER",
+                          "columnType": "text",
+                          "textColor": "",
+                          "textSize": "0.875rem",
+                          "fontStyle": "",
+                          "enableFilter": true,
+                          "enableSort": true,
+                          "isVisible": true,
+                          "isDisabled": false,
+                          "isCellEditable": false,
+                          "isEditable": false,
+                          "isCellVisible": true,
+                          "isDerived": false,
+                          "label": "expensesById",
+                          "isSaveVisible": true,
+                          "isDiscardVisible": true,
+                          "computedValue": "{{expense.processedTableData.map((currentRow, currentIndex) => ( currentRow[\"expensesById\"]))}}",
+                          "validation": {},
+                          "cellBackground": ""
                         }
                       },
                       "key": "2aepefgv0x",
@@ -18674,16 +18738,6 @@
           ],
           [
             {
-              "id": "Dashboard page_Get_Loans",
-              "name": "Get_Loans",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
               "id": "Dashboard page_FindById_Employee_1",
               "name": "FindById_Employee_1",
               "confirmBeforeExecute": false,
@@ -18741,6 +18795,14 @@
               "jsonPathKeys": [
                 "partner.selectedRow._id"
               ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Dashboard page_Get_Loans",
+              "name": "Get_Loans",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
               "timeoutInMillisecond": 10000
             }
           ]
